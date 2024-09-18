@@ -55,20 +55,51 @@
 
         .portfolio-piece {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .portfolio-piece img {
-            max-width: 40%;
+            max-width: 80%;
             border-radius: 10px;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
 
-        .portfolio-piece div {
-            flex: 1;
+        .portfolio-piece h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #FF7A33; /* Highlighted Title */
+        }
+
+        .portfolio-piece .role {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #3B3B3B;
+        }
+
+        .portfolio-piece .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-piece .details ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .portfolio-piece .details ul li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #FFF1D0;
+            border-radius: 8px;
+            font-size: 16px;
         }
 
         /* Contact Form */
@@ -137,27 +168,57 @@
 
             <!-- Portfolio Item 1 -->
             <div class="portfolio-piece">
-                <img src="image1.jpg" alt="Portfolio Piece 1">
-                <div>
-                    <h3>Project Title 1</h3>
-                    <p>
-                        A brief description of the first project. Explain what it is, what your role was, and what you learned or accomplished.
-                    </p>
+                <img src="placeholder-image1.jpg" alt="Placeholder Image 1">
+                <h3>Game Title 1</h3>
+                <div class="role">Role: Lead Game Designer</div>
+                <p class="description">
+                    This is a brief description of the first game. Talk about the story, mechanics, and what makes the game stand out.
+                </p>
+                <div class="details">
+                    <ul>
+                        <li><strong>Genre:</strong> Action-Adventure</li>
+                        <li><strong>Engine:</strong> Unreal Engine 5</li>
+                        <li><strong>Development Time:</strong> 18 months</li>
+                        <li><strong>Platform:</strong> PC, PS5, Xbox</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Portfolio Item 2 -->
             <div class="portfolio-piece">
-                <img src="image2.jpg" alt="Portfolio Piece 2">
-                <div>
-                    <h3>Project Title 2</h3>
-                    <p>
-                        A brief description of the second project. Include details like challenges you faced and how you solved them.
-                    </p>
+                <img src="placeholder-image2.jpg" alt="Placeholder Image 2">
+                <h3>Game Title 2</h3>
+                <div class="role">Role: Gameplay Programmer</div>
+                <p class="description">
+                    A short description of the second game. Highlight the main gameplay mechanics and the role you played in its development.
+                </p>
+                <div class="details">
+                    <ul>
+                        <li><strong>Genre:</strong> Puzzle Platformer</li>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Development Time:</strong> 10 months</li>
+                        <li><strong>Platform:</strong> PC, Nintendo Switch</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Add more portfolio pieces as needed -->
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-piece">
+                <img src="placeholder-image3.jpg" alt="Placeholder Image 3">
+                <h3>Game Title 3</h3>
+                <div class="role">Role: Level Designer</div>
+                <p class="description">
+                    This game showcases intricate level design with multiple solutions. I worked on creating engaging and challenging puzzles.
+                </p>
+                <div class="details">
+                    <ul>
+                        <li><strong>Genre:</strong> Strategy</li>
+                        <li><strong>Engine:</strong> Godot</li>
+                        <li><strong>Development Time:</strong> 12 months</li>
+                        <li><strong>Platform:</strong> PC, Mobile</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Form Section -->
