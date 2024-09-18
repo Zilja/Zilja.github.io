@@ -55,17 +55,19 @@
 
         .portfolio-piece {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            text-align: center;
             margin-bottom: 50px;
         }
 
         .portfolio-piece img {
-            max-width: 80%;
+            max-width: 40%;
             border-radius: 10px;
-            margin-bottom: 20px;
+        }
+
+        .portfolio-piece .details {
+            width: 55%;
         }
 
         .portfolio-piece h3 {
@@ -91,7 +93,6 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: left;
         }
 
         .portfolio-piece .details ul li {
@@ -102,46 +103,89 @@
             font-size: 16px;
         }
 
-        /* Contact Form */
-        .contact-form {
-            background-color: #FEE4C4;
-            padding: 40px;
-            border-radius: 15px;
+        /* More Details Button */
+        .more-details {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #FF7A33;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
         }
 
-        .contact-form h2 {
-            margin-bottom: 30px;
+        .more-details:hover {
+            background-color: #FF9B66;
         }
 
-        .contact-form input, .contact-form textarea {
+        /* Contact Section */
+        .contact {
+            padding: 40px;
+            text-align: center;
+            background-color: #FFE1B3;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact form input,
+        .contact form textarea {
             width: 80%;
             padding: 15px;
-            margin-bottom: 20px;
+            margin: 10px 0;
             border-radius: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Matching fonts */
         }
 
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #FFAF60;
+        .contact form textarea {
+            resize: none;
+            height: 150px;
         }
 
-        .contact-form button {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            background-color: #FFAF60;
+        .contact form button {
+            background-color: #FF7A33;
             color: white;
-            font-size: 18px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
+            margin-top: 10px; /* Ensure consistent spacing */
         }
 
-        .contact-form button:hover {
-            background-color: #FF9930;
+        .contact form button:hover {
+            background-color: #FF9B66;
+        }
+
+        /* Responsive Layout */
+        @media screen and (max-width: 768px) {
+            .portfolio-piece {
+                flex-direction: column;
+            }
+
+            .portfolio-piece img, .portfolio-piece .details {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .portfolio-piece img {
+                max-width: 100%;
+            }
+
+            .contact form input,
+            .contact form textarea {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -169,68 +213,68 @@
             <!-- Portfolio Item 1 -->
             <div class="portfolio-piece">
                 <img src="placeholder-image1.jpg" alt="Placeholder Image 1">
-                <h3>Game Title 1</h3>
-                <div class="role">Role: Lead Game Designer</div>
-                <p class="description">
-                    This is a brief description of the first game. Talk about the story, mechanics, and what makes the game stand out.
-                </p>
                 <div class="details">
+                    <h3>Game Title 1</h3>
+                    <div class="role">Role: Lead Game Designer</div>
+                    <p class="description">
+                        This is a brief description of the first game. Talk about the story, mechanics, and what makes the game stand out.
+                    </p>
                     <ul>
                         <li><strong>Genre:</strong> Action-Adventure</li>
                         <li><strong>Engine:</strong> Unreal Engine 5</li>
                         <li><strong>Development Time:</strong> 18 months</li>
                         <li><strong>Platform:</strong> PC, PS5, Xbox</li>
                     </ul>
+                    <a href="project1.html" class="more-details">More Details</a>
                 </div>
             </div>
 
             <!-- Portfolio Item 2 -->
             <div class="portfolio-piece">
                 <img src="placeholder-image2.jpg" alt="Placeholder Image 2">
-                <h3>Game Title 2</h3>
-                <div class="role">Role: Gameplay Programmer</div>
-                <p class="description">
-                    A short description of the second game. Highlight the main gameplay mechanics and the role you played in its development.
-                </p>
                 <div class="details">
+                    <h3>Game Title 2</h3>
+                    <div class="role">Role: Gameplay Programmer</div>
+                    <p class="description">
+                        A short description of the second game. Highlight the main gameplay mechanics and the role you played in its development.
+                    </p>
                     <ul>
                         <li><strong>Genre:</strong> Puzzle Platformer</li>
                         <li><strong>Engine:</strong> Unity</li>
                         <li><strong>Development Time:</strong> 10 months</li>
                         <li><strong>Platform:</strong> PC, Nintendo Switch</li>
                     </ul>
+                    <a href="project2.html" class="more-details">More Details</a>
                 </div>
             </div>
 
             <!-- Portfolio Item 3 -->
             <div class="portfolio-piece">
                 <img src="placeholder-image3.jpg" alt="Placeholder Image 3">
-                <h3>Game Title 3</h3>
-                <div class="role">Role: Level Designer</div>
-                <p class="description">
-                    This game showcases intricate level design with multiple solutions. I worked on creating engaging and challenging puzzles.
-                </p>
                 <div class="details">
+                    <h3>Game Title 3</h3>
+                    <div class="role">Role: Level Designer</div>
+                    <p class="description">
+                        This game showcases intricate level design with multiple solutions. I worked on creating engaging and challenging puzzles.
+                    </p>
                     <ul>
                         <li><strong>Genre:</strong> Strategy</li>
                         <li><strong>Engine:</strong> Godot</li>
                         <li><strong>Development Time:</strong> 12 months</li>
                         <li><strong>Platform:</strong> PC, Mobile</li>
                     </ul>
+                    <a href="project3.html" class="more-details">More Details</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section class="contact-form">
+        <!-- Contact Section -->
+        <section class="contact">
             <h2>Contact Me</h2>
-            <form action="submit_form.php" method="POST">
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
-                <br>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <br>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <br>
+                <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
